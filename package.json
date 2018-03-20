@@ -1,0 +1,26 @@
+{
+  "name": "detect-privacy-mode",
+  "version": "1.0.0",
+  "description": "a front-end module for detection of Private Browsing/Incognito/Privacy Mode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dameyellow/detect-privacy-mode.git"
+  },
+  "keywords": [
+    "browser",
+    "privacy",
+    "private",
+    "incognito",
+    "detection"
+  ],
+  "author": "DAME-YELLOW",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dameyellow/detect-privacy-mode/issues"
+  },
+  "homepage": "https://github.com/dameyellow/detect-privacy-mode#readme"
+}
