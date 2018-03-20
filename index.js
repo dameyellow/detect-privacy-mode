@@ -8,11 +8,11 @@
 function detectInChrome( resolve, reject, callback ){
   window.webkitRequestFileSystem(
     window.TEMPORARY, 1,
-    () => {
+    function() {
       callback( false );
       resolve( false );
     },
-    (e) => {
+    function(e) {
       callback( true );
       resolve( true );
     }
@@ -27,11 +27,11 @@ function detectInFirefox( resolve, reject, callback ){
     callback( true );
     resolve( true );
   }
-  db.onerror = ()=>{
+  db.onerror = function(){
     callback( true );
     resolve( true );
   };
-  db.onsuccess = ()=>{
+  db.onsuccess = function(){
     callback( false );
     resolve( false );
   };
@@ -44,21 +44,21 @@ function detectInIEAndEdge( resolve, reject, callback ){
   try {
     if (!window.indexedDB) {
       is_private = true;
-      setTimeout(()=>{
+      setTimeout(function(){
         callback( true );
         resolve( true );
       },0);
     }
   } catch (e) {
     is_private = true;
-    setTimeout(()=>{
+    setTimeout(function(){
       callback( true );
       resolve( true );
     },0);
   }
 
   if (typeof is_private === 'undefined'){
-    setTimeout(()=>{
+    setTimeout(function(){
       callback( false );
       resolve( false );
     },0);
@@ -97,7 +97,7 @@ module.exports = function(callback){
 
   callback = callback || function(){};
 
-  return new Promise( (resolve,reject) => {
+  return new Promise( function(resolve,reject) {
     // @Chrome
     if (window.webkitRequestFileSystem)
     {
