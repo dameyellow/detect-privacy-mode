@@ -1,6 +1,6 @@
 {
   "name": "detect-privacy-mode",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "a front-end module for detection of Private Browsing/Incognito/Privacy Mode",
   "main": "index.js",
   "scripts": {
